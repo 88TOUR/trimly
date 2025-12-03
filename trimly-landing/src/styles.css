@@ -146,8 +146,14 @@
 
       /* 섹션 공통 */
       section {
-        margin-bottom: 28px;
-      }
+  margin-bottom: 48px; /* 기본(모바일) 간격 */
+}
+
+@media (min-width: 768px) {
+  section {
+    margin-bottom: 72px; /* 데스크탑에서 더 크게 */
+  }
+}
 
       .section-label {
         font-size: 11px;
@@ -392,4 +398,106 @@ body {
   color: var(--gray-100);
   border-color: rgba(148, 163, 184, 0.7);
   background-color: rgba(15, 23, 42, 0.9);
+}
+/* ============================
+   GLOBAL SPACING SYSTEM
+   Mobile-first
+============================ */
+:root {
+  /* Mobile base spacing */
+  --space-page: 20px;        /* 좌우 */
+  --space-hero: 84px;        /* Hero 위/아래 */
+  --space-section: 64px;     /* 섹션 간격 */
+  --space-inner: 24px;       /* 섹션 내부 요소 여백 */
+}
+
+/* PC 확장 */
+@media (min-width: 768px) {
+  :root {
+    --space-page: 40px;
+    --space-hero: 140px;
+    --space-section: 100px;
+    --space-inner: 28px;
+  }
+}
+
+/* ============================
+   LAYOUT BASE
+============================ */
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 32px 20px 40px; /* 위, 좌우, 아래 */
+
+  /* 모바일 기준이니까 여기 값이 기본 */
+}
+
+/* 데스크탑에서 살짝 더 여유 있게 */
+@media (min-width: 768px) {
+  .page {
+    max-width: 520px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+/* ============================
+   HERO SECTION
+============================ */
+.hero {
+  margin-top: 40px;      /* 🔼 이전보다 위로 더 띄우기 */
+  margin-bottom: 48px;   /* 🔽 아래도 넉넉하게 */
+}
+
+@media (min-width: 768px) {
+  .hero {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
+
+.hero-section {
+  padding-top: var(--space-hero);
+  padding-bottom: var(--space-hero);
+  margin-bottom: var(--space-section);
+}
+
+.hero-section .section-title {
+  margin-bottom: var(--space-inner);
+}
+
+.hero-section .section-text {
+  margin-bottom: var(--space-inner);
+}
+
+/* ============================
+   GENERIC SECTION SPACING
+============================ */
+.section,
+.fade-section,
+.problem-section,
+.how-section,
+.now-section,
+.early-access-section {
+  margin-top: var(--space-section);
+  margin-bottom: var(--space-section);
+  padding-inline: var(--space-page);
+}
+
+.section-title {
+  margin-bottom: var(--space-inner);
+}
+
+.section-text {
+  margin-bottom: calc(var(--space-inner) * 0.8);
+  line-height: 1.6;
+}
+
+/* ============================
+   COMPONENT SPACING (CTA, BUTTONS)
+============================ */
+.button-group,
+.cta-area,
+.card-group {
+  margin-top: var(--space-inner);
+  margin-bottom: var(--space-inner);
 }

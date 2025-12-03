@@ -26,9 +26,11 @@ function Hero() {
 
       <p className="hero-subtitle">
         trimly는 체지방이 실제로 감량되는 과정에서 쌓이는{' '}
-        <strong>식단 · 수면 · 운동 데이터</strong>를 분석해
         <br />
-        당신만의 감량 패턴을 찾아주는 다이어트 보조 앱입니다.
+        <strong>식단 · 수면 · 운동 데이터</strong>를 분석해
+       
+        당신만의 감량 패턴을 찾아주는  <br />
+        <strong>다이어트 보조</strong> 어플리케이션입니다.
       </p>
 
       <div className="hero-cta-group">
