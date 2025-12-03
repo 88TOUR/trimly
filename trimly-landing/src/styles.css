@@ -1,0 +1,395 @@
+:root {
+        --bg: #050509;
+        --bg-elevated: #111118;
+        --gray-100: #f9fafb;
+        --gray-300: #d1d5db;
+        --gray-500: #6b7280;
+        --gray-700: #374151;
+        --gray-900: #111827;
+        --purple: #7c3aed;
+        --purple-soft: rgba(124, 58, 237, 0.14);
+        --border-subtle: rgba(148, 163, 184, 0.3);
+        --radius-lg: 18px;
+        --radius-xl: 24px;
+        --radius-pill: 999px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+          system-ui, sans-serif;
+        background-color: var(--bg);
+        color: var(--gray-100);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .page {
+        max-width: 480px; /* 모바일 기준, 살짝 넓게 */
+        margin: 0 auto;
+        padding: 20px 18px 32px;
+      }
+
+      /* 헤더 */
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.02em;
+      }
+
+      .beta-badge {
+        font-size: 11px;
+        padding: 4px 9px;
+        border-radius: var(--radius-pill);
+        background: var(--purple-soft);
+        color: var(--purple);
+        border: 1px solid rgba(124, 58, 237, 0.4);
+      }
+
+      /* 히어로 */
+      .hero {
+        margin-bottom: 32px;
+      }
+
+      .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        padding: 4px 10px;
+        border-radius: var(--radius-pill);
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid var(--border-subtle);
+        color: var(--gray-300);
+        margin-bottom: 14px;
+      }
+
+      .hero-tag-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--purple);
+      }
+
+      .hero-title {
+        font-size: 24px;
+        line-height: 1.32;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+      }
+
+      .hero-title span {
+        color: var(--purple);
+      }
+
+      .hero-subtitle {
+        font-size: 13px;
+        line-height: 1.55;
+        color: var(--gray-300);
+        margin-bottom: 20px;
+      }
+
+      .hero-subtitle strong {
+        color: var(--gray-100);
+        font-weight: 600;
+      }
+
+      .hero-cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .btn {
+        width: 100%;
+        border-radius: var(--radius-pill);
+        padding: 13px 16px;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .btn-primary {
+        background: var(--purple);
+        color: white;
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--gray-100);
+        border: 1px solid var(--border-subtle);
+      }
+
+      .hero-note {
+        font-size: 11px;
+        color: var(--gray-500);
+      }
+
+      /* 섹션 공통 */
+      section {
+        margin-bottom: 28px;
+      }
+
+      .section-label {
+        font-size: 11px;
+        color: var(--gray-500);
+        margin-bottom: 6px;
+      }
+
+      .section-title {
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.45;
+        margin-bottom: 8px;
+      }
+
+      .section-title span {
+        color: var(--purple);
+      }
+
+      .section-text {
+        font-size: 13px;
+        line-height: 1.6;
+        color: var(--gray-300);
+      }
+
+      /* 카드 / 블록 */
+      .card {
+        margin-top: 14px;
+        padding: 14px 14px;
+        border-radius: var(--radius-lg);
+        background: var(--bg-elevated);
+        border: 1px solid var(--border-subtle);
+      }
+
+      .card-title {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .card-text {
+        font-size: 12px;
+        line-height: 1.6;
+        color: var(--gray-300);
+      }
+
+      /* 데이터 플로우 카드 */
+      .data-flow {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .data-step {
+        display: flex;
+        gap: 10px;
+        padding: 12px 12px;
+        border-radius: var(--radius-lg);
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(51, 65, 85, 0.8);
+      }
+
+      .data-step-icon {
+        width: 26px;
+        height: 26px;
+        border-radius: 10px;
+        background: var(--purple-soft);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        color: var(--purple);
+        flex-shrink: 0;
+      }
+
+      .data-step-title {
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .data-step-text {
+        font-size: 12px;
+        color: var(--gray-300);
+        line-height: 1.5;
+      }
+
+      /* 강조 박스 */
+      .highlight-box {
+        margin-top: 12px;
+        padding: 12px 12px;
+        border-radius: var(--radius-xl);
+        background: rgba(17, 24, 39, 0.9);
+        border: 1px solid rgba(75, 85, 99, 0.8);
+        font-size: 12px;
+        color: var(--gray-100);
+        line-height: 1.6;
+      }
+
+      .highlight-box strong {
+        color: var(--purple);
+      }
+
+      /* 폼 섹션 */
+      .form {
+        margin-top: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .field label {
+        font-size: 12px;
+        color: var(--gray-300);
+      }
+
+      .field input {
+        border-radius: 12px;
+        border: 1px solid var(--border-subtle);
+        background: rgba(15, 23, 42, 0.9);
+        padding: 10px 12px;
+        color: var(--gray-100);
+        font-size: 13px;
+        outline: none;
+      }
+
+      .field input::placeholder {
+        color: var(--gray-500);
+      }
+
+      /* 푸터 */
+      .footer {
+        border-top: 1px solid rgba(31, 41, 55, 0.9);
+        margin-top: 24px;
+        padding-top: 14px;
+        font-size: 11px;
+        color: var(--gray-500);
+        line-height: 1.6;
+      }
+
+      .footer strong {
+        color: var(--gray-300);
+      }
+
+      /* 약간의 데스크톱 확장 */
+      @media (min-width: 768px) {
+        .page {
+          max-width: 520px;
+          padding-top: 32px;
+        }
+
+        .hero-title {
+          font-size: 26px;
+        }
+      }
+      /* 버튼 인터랙션 */
+.btn {
+  transition:
+    background-color 0.18s ease-out,
+    border-color 0.18s ease-out,
+    transform 0.12s ease-out,
+    box-shadow 0.18s ease-out;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.8);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(148, 163, 184, 0.8);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.btn-secondary:active {
+  transform: translateY(1px);
+}
+
+/* 페이지 배경을 살짝 더 리치하게 */
+body {
+  background:
+    radial-gradient(circle at top, rgba(124, 58, 237, 0.18), transparent 55%),
+    radial-gradient(circle at 80% 20%, rgba(15, 23, 42, 0.9), transparent 60%),
+    var(--bg);
+}
+
+/* 섹션 스크롤 페이드인 */
+.fade-section {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.45s ease-out,
+    transform 0.45s ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link {
+  font-size: 11px;
+  color: var(--gray-500);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition:
+    color 0.16s ease-out,
+    border-color 0.16s ease-out,
+    background-color 0.16s ease-out;
+}
+
+.nav-link:hover {
+  color: var(--gray-300);
+  border-color: rgba(148, 163, 184, 0.5);
+}
+
+.nav-link.active {
+  color: var(--gray-100);
+  border-color: rgba(148, 163, 184, 0.7);
+  background-color: rgba(15, 23, 42, 0.9);
+}
